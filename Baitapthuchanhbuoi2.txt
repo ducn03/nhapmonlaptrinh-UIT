@@ -1,0 +1,40 @@
+1. Tính khoảng cách 2 điểm A và B trên mặt phẳng 2 chiều
+❖ Input: Nhập tọa độ điểm A(x1,y1), B(x2,y2)
+❖ Output: Khoảng cách giữa A và B
+2. Tinh diện tích của đường tròn
+❖ Input: Nhập bán kính đường tròn trong mặt phẳng Oxy
+❖ Output: Diện tích hình tròn
+3. Tính tuổi của một người khi biết năm sinh
+❖Input: Nhập vào năm sinh
+❖ Output: Tuổi của năm sinh vừa nhập.
+ 
+4. Tính tổng S(n) = 12+22+32….n2
+❖ Input: Nhập n
+❖ Output: Tổng S(n)
+5. Tính tổng S(n) = 1 +1/2+1/3+….1/n
+❖ Input: Nhập n
+❖ Output: Tổng S(n)
+6. Tính tổng S(n) = 1+1/1*2+1/2*3+…..1/n*(n+1)
+❖ Input: Nhập n
+❖ Output: Kết quả S(n).
+ 
+7. Tính tổng ước số của số nguyên dương n
+❖ Input: Nhập n
+❖ Output: Tổng ước số S(n)
+8. Đếm số lượng chữ số của một số nguyên dương n
+❖ Input: Nhập n
+❖ Output: Số lượng chữ số của số n (ví dụ: 123434 = 6)
+9. Tìm chữ số lớn nhất của số nguyên dương n
+❖ Input: Nhập n
+ Output: Kết quả số lớn nhất của số nguyên dương n
+ 
+10. Cho tam giác ABC tọa độ A(x1,y1), B(x2,y2), C(x3,y3)
+❖ Input: Nhập tọa độ A(x1,y1), B(x2,y2), C(x3,y3)
+❖ Output: Chu vi của tam giác.
+11. Cho tam giác ABC tọa độ A(x1,y1), B(x2,y2), C(x3,y3)
+❖ Input: Nhập tọa độ A(x1,y1), B(x2,y2), C(x3,y3)
+❖ Output: Diện tích của tam giác.
+12. Cho tam giác ABC tọa độ A(x1,y1), B(x2,y2), C(x3,y3) điểm M(xm,ym)
+❖ Input: Nhập tọa độ A(x1,y1), B(x2,y2), C(x3,y3), M(xm,ym)
+❖ Output: M có thuộc tam giác ABC không ?
+ 

@@ -1,0 +1,651 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+// Khai báo hàm cho từng bài tập
+void exercise1();
+void exercise2();
+void exercise3();
+void exercise4();
+void exercise5();
+void exercise6();
+void exercise7();
+void exercise8();
+void exercise9();
+void exercise10();
+void exercise11();
+void exercise12();
+void exercise13();
+void exercise14();
+void exercise15();
+void exercise16();
+void exercise17();
+void exercise18();
+void exercise19();
+void exercise20();
+void exercise21();
+void exercise22();
+void exercise23();
+void exercise24();
+void exercise25();
+void exercise26();
+void exercise27();
+
+// Hàm hiển thị menu
+void displayMenu() {
+    cout << "\n===== MENU BAI TAP NHAP MON LAP TRINH =====\n";
+    cout << "1. Tinh tong, hieu, tich, thuong va tong binh phuong cua hai so\n";
+    cout << "2. Tinh chu vi va dien tich hinh tron\n";
+    cout << "3. Tinh diem trung binh 3 mon Toan, Ly, Hoa\n";
+    cout << "4. Phan tich so nguyen 3 chu so\n";
+    cout << "5. Giai phuong trinh bac nhat ax+b=0\n";
+    cout << "6. Giai va bien luan phuong trinh bac hai ax2+bx+c=0\n";
+    cout << "7. Kiem tra so nguyen to\n";
+    cout << "8. Kiem tra nam nhuan\n";
+    cout << "9. Kiem tra so chia het cho 3 va 5\n";
+    cout << "10. Kiem tra ky tu (chu cai, chu so, ky tu dac biet)\n";
+    cout << "11. Kiem tra tam giac hop le\n";
+    cout << "12. Tinh cac bieu thuc tong\n";
+    cout << "13. Tinh tong cac chu so cua so nguyen\n";
+    cout << "14. Tim so lon nhat trong 3 so\n";
+    cout << "15. Tinh tuoi dua tren nam sinh\n";
+    cout << "16. Tinh tien va thue gia tri gia tang\n";
+    cout << "17. Tinh luong nhan vien dua tren tham nien\n";
+    cout << "18. Tinh tien karaoke\n";
+    cout << "19. Kiem tra ngay thang va tinh toan ngay\n";
+    cout << "20. Doi tien theo menh gia\n";
+    cout << "21. Tinh so nut cua so xe\n";
+    cout << "22. Tinh tien dien\n";
+    cout << "23. In thu trong tuan tu so 1-7\n";
+    cout << "24. In so ngay cua thang\n";
+    cout << "25. Kiem tra chan le bang switch-case\n";
+    cout << "26. May tinh don gian bang switch-case\n";
+    cout << "27. Mo phong menu nha hang\n";
+    cout << "0. Thoat chuong trinh\n";
+    cout << "Nhap lua chon cua ban (0-27): ";
+}
+
+/******************************************************************************
+ * Hàm: exercise1
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập 2 số nguyên a và b. Tính tổng, hiệu, tích, 
+ *     thương và tổng bình phương của hai số.
+ * Mục đích: Tính và hiển thị tổng, hiệu, tích, thương và tổng bình phương của hai số nguyên.
+ * Đầu vào: Hai số nguyên a và b do người dùng nhập.
+ * Đầu ra: In tổng (a+b), hiệu (a-b), tích (a*b), thương (a/b nếu b≠0), 
+ *         và tổng bình phương (a²+b²).
+ * Ghi chú: Xử lý trường hợp chia cho 0 bằng cách hiển thị thông báo lỗi.
+ ******************************************************************************/
+void exercise1() {
+    int a, b;
+    cout << "Nhap hai so nguyen a va b: ";
+    cin >> a >> b;
+    cout << "Tong: " << a + b << endl;
+    cout << "Hieu: " << a - b << endl;
+    cout << "Tich: " << a * b << endl;
+    if (b != 0) {
+        cout << "Thuong: " << fixed << setprecision(2) << (float)a / b << endl;
+    } else {
+        cout << "Thuong: Khong the chia cho 0\n";
+    }
+    cout << "Tong binh phuong: " << (a * a + b * b) << endl;
+}
+
+/******************************************************************************
+ * Hàm: exercise2
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình cho biết bán kính của đường tròn. Tính chu vi 
+ *     và diện tích của hình tròn đó.
+ * Mục đích: Tính và hiển thị chu vi và diện tích của hình tròn dựa trên bán kính.
+ * Đầu vào: Bán kính (r) của hình tròn dạng số thực.
+ * Đầu ra: In chu vi (2πr) và diện tích (πr²) với hai chữ số thập phân.
+ * Ghi chú: Sử dụng hằng số PI = 3.14159; kiểm tra bán kính không âm.
+ ******************************************************************************/
+void exercise2() {
+    const double PI = 3.14159;
+    double r;
+    cout << "Nhap ban kinh hinh tron: ";
+    cin >> r;
+    if (r <= 0) {
+        cout << "Ban kinh phai la so khong am va lon hon 0!\n";
+    }
+    cout << "Chu vi: " << fixed << setprecision(2) << 2 * PI * r << endl;
+    cout << "Dien tich: " << fixed << setprecision(2) << PI * r * r << endl;
+}
+
+/******************************************************************************
+ * Hàm: exercise3
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập điểm thi 3 môn Toán, Lý, Hóa của một sinh viên. 
+ *     Tính điểm trung bình của sinh viên đó.
+ * Mục đích: Tính và hiển thị điểm trung bình của ba môn Toán, Lý, Hóa.
+ * Đầu vào: Điểm Toán, Lý, Hóa dạng số thực.
+ * Đầu ra: In điểm trung bình với hai chữ số thập phân.
+ * Ghi chú: Kiểm tra điểm nằm trong khoảng từ 0 đến 10.
+ ******************************************************************************/
+void exercise3() {
+    float math, physics, chemistry;
+    cout << "Nhap diem Toan, Ly, Hoa: ";
+    cin >> math >> physics >> chemistry;
+    if (math >= 0 && math <= 10 && physics >= 0 && physics <= 10 && chemistry >= 0 && chemistry <= 10) {
+        cout << "Diem trung binh: " << fixed << setprecision(2) << (math + physics + chemistry) / 3 << endl;
+    } else {
+        cout << "Diem phai nam trong khoang tu 0 den 10!\n";
+    }
+}
+
+/******************************************************************************
+ * Hàm: exercise4
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập vào một số nguyên 3 chữ số (từ 100 - 999), 
+ *     sau đó in ra các chữ số thuộc hàng trăm, hàng chục, hàng đơn vị.
+ * Mục đích: Tách và hiển thị các chữ số hàng trăm, hàng chục, hàng đơn vị của số nguyên 3 chữ số.
+ * Đầu vào: Số nguyên 3 chữ số (100–999).
+ * Đầu ra: In các chữ số hàng trăm, hàng chục, hàng đơn vị.
+ * Ghi chú: Kiểm tra số nhập vào là số nguyên 3 chữ số (100–999).
+ ******************************************************************************/
+void exercise4() {
+    int n;
+    cout << "Nhap so nguyen 3 chu so (100-999): ";
+    cin >> n;
+    if (n >= 100 && n <= 999) {
+        int hundreds = n / 100;
+        int tens = (n / 10) % 10;
+        int units = n % 10;
+        cout << "Hang tram: " << hundreds << endl;
+        cout << "Hang chuc: " << tens << endl;
+        cout << "Hang don vi: " << units << endl;
+    } else {
+        cout << "So nhap vao phai la so nguyen 3 chu so (100-999)!\n";
+    }
+}
+
+/******************************************************************************
+ * Hàm: exercise5
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình Giải phương trình bậc nhất ax+b=0
+ * Mục đích: Giải và hiển thị nghiệm của phương trình bậc nhất ax + b = 0.
+ * Đầu vào: Hệ số a và b dạng số thực.
+ * Đầu ra: In nghiệm của phương trình hoặc thông báo không có nghiệm/vô số nghiệm.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise5() {
+    float a, b;
+    cout << "Nhap he so a va b cua phuong trinh ax + b = 0: ";
+    cin >> a >> b;
+    
+    if (a != 0) {
+        // Phương trình có một nghiệm: x = -b / a
+        float x = -b / a;
+        cout << "Phuong trinh co mot nghiem: x = " << fixed << setprecision(2) << x << endl;
+    } else {
+        if (b == 0) {
+            // Phương trình 0x + 0 = 0 có vô số nghiệm
+            cout << "Phuong trinh co vo so nghiem.\n";
+        } else {
+            // Phương trình 0x + b = 0 không có nghiệm nếu b ≠ 0
+            cout << "Phuong trinh khong co nghiem.\n";
+        }
+    }
+}
+
+/******************************************************************************
+ * Hàm: exercise6
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập 3 số a, b, c. Giải và biện luận phương trình 
+ *     bậc hai ax2+bx+c=0
+ * Mục đích: Giải và phân tích phương trình bậc hai ax² + bx + c = 0.
+ * Đầu vào: Hệ số a, b, c dạng số thực.
+ * Đầu ra: In các nghiệm (nếu có) và phân tích số lượng nghiệm.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise6() {
+    float a, b, c;
+    cout << "Nhap he so a, b, c cua phuong trinh ax^2 + bx + c = 0: ";
+    cin >> a >> b >> c;
+
+    if (a == 0) {
+        // Trường hợp không phải phương trình bậc hai
+        if (b == 0) {
+            if (c == 0) {
+                cout << "Phuong trinh co vo so nghiem.\n";
+            } else {
+                cout << "Phuong trinh khong co nghiem.\n";
+            }
+        } else {
+            // Phương trình bậc nhất: bx + c = 0
+            float x = -c / b;
+            cout << "Phuong trinh tro thanh phuong trinh bac nhat bx + c = 0.\n";
+            cout << "Nghiem: x = " << fixed << setprecision(2) << x << endl;
+        }
+    } else {
+        // Phương trình bậc hai: ax² + bx + c = 0
+        float delta = b * b - 4 * a * c;
+        if (delta > 0) {
+            // Hai nghiệm phân biệt
+            float x1 = (-b + sqrt(delta)) / (2 * a);
+            float x2 = (-b - sqrt(delta)) / (2 * a);
+            cout << "Phuong trinh co hai nghiem phan biet:\n";
+            cout << "x1 = " << fixed << setprecision(2) << x1 << endl;
+            cout << "x2 = " << fixed << setprecision(2) << x2 << endl;
+        } else if (delta == 0) {
+            // Nghiệm kép
+            float x = -b / (2 * a);
+            cout << "Phuong trinh co nghiem kep:\n";
+            cout << "x = " << fixed << setprecision(2) << x << endl;
+        } else {
+            // Không có nghiệm thực
+            cout << "Phuong trinh khong co nghiem thuc.\n";
+        }
+    }
+}
+
+/******************************************************************************
+ * Hàm: exercise7
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình kiểm tra một số nguyên n là số nguyên tố không?
+ * Mục đích: Kiểm tra xem số nguyên n có phải là số nguyên tố hay không.
+ * Đầu vào: Số nguyên n.
+ * Đầu ra: In kết quả kiểm tra xem n có phải số nguyên tố hay không.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise7() {
+    cout << "Chua duoc trien khai. Vui long trien khai kiem tra so nguyen to.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise8
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập một năm, kiểm tra xem có phải năm nhuận không?
+ * Mục đích: Kiểm tra xem năm nhập vào có phải là năm nhuận hay không.
+ * Đầu vào: Một năm dạng số nguyên.
+ * Đầu ra: In kết quả kiểm tra xem năm có phải năm nhuận hay không.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise8() {
+    cout << "Chua duoc trien khai. Vui long trien khai kiem tra nam nhuan.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise9
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình kiểm tra số vừa nhập có chia hết cho 3 và 5 không?
+ * Mục đích: Kiểm tra xem số nhập vào có chia hết cho cả 3 và 5 hay không.
+ * Đầu vào: Số nguyên.
+ * Đầu ra: In kết quả kiểm tra xem số có chia hết cho 3 và 5 hay không.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise9() {
+    cout << "Chua duoc trien khai. Vui long trien khai kiem tra chia het cho 3 va 5.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise10
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập một ký tự, kiểm tra xem nó là chữ cái, 
+ *     chữ số hay ký tự đặc biệt?
+ * Mục đích: Xác định ký tự nhập vào là chữ cái, chữ số hay ký tự đặc biệt.
+ * Đầu vào: Một ký tự.
+ * Đầu ra: In loại của ký tự (chữ cái, chữ số, hoặc ký tự đặc biệt).
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise10() {
+    cout << "Chua duoc trien khai. Vui long trien khai kiem tra ky tu.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise11
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập 3 cạnh tam giác, kiểm tra có phải là tam giác 
+ *     hợp lệ không?
+ * Mục đích: Kiểm tra xem ba cạnh nhập vào có tạo thành tam giác hợp lệ hay không.
+ * Đầu vào: Ba cạnh dạng số thực.
+ * Đầu ra: In kết quả kiểm tra xem ba cạnh có tạo thành tam giác hợp lệ hay không.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise11() {
+    cout << "Chua duoc trien khai. Vui long trien khai kiem tra tam giac hop le.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise12
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập n>0 tính biểu thức:
+ *     a) S = 1+2+…+n
+ *     b) S= 1+1/3+1/5….+1/2n+1
+ *     c) S=1/1*2+1/2*3+….+1/n*(n+1)
+ *     d) S=x+x2/1+2+x3/1+2+3…+xn/1+2+3…+n
+ * Mục đích: Tính các tổng toán học dựa trên số n và x nhập vào.
+ * Đầu vào: Số nguyên dương n và (cho phần d) số x.
+ * Đầu ra: In kết quả của bốn tổng.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise12() {
+    cout << "Chua duoc trien khai. Vui long trien khai tinh cac bieu thuc tong.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise13
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập vào số nguyên dương n. Tính tổng các chữ số 
+ *     của số đó. (Ví dụ: 1234; Kết quả: 10)
+ * Mục đích: Tính tổng các chữ số của một số nguyên dương.
+ * Đầu vào: Số nguyên dương n.
+ * Đầu ra: In tổng các chữ số của n.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise13() {
+    cout << "Chua duoc trien khai. Vui long trien khai tinh tong cac chu so.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise14
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập 03 số a,b,c từ bàn phím. Tìm số lớn nhất 
+ *     trong 3 số.
+ * Mục đích: Tìm và hiển thị số lớn nhất trong ba số nhập vào.
+ * Đầu vào: Ba số a, b, c dạng số thực.
+ * Đầu ra: In số lớn nhất trong ba số.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise14() {
+    cout << "Chua duoc trien khai. Vui long trien khai tim so lon nhat trong 3 so.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise15
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập năm sinh của một người. Tính tuổi người đó.
+ * Mục đích: Tính và hiển thị tuổi dựa trên năm sinh.
+ * Đầu vào: Năm sinh dạng số nguyên.
+ * Đầu ra: In tuổi của người đó.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise15() {
+    cout << "Chua duoc trien khai. Vui long trien khai tinh tuoi dua tren nam sinh.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise16
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập tên sản phẩm, số lượng và đơn giá. Tính tiền 
+ *     và thuế giá trị gia tăng phải trả, biết:
+ *     a) tiền = số lượng * đơn giá
+ *     b) thuế giá trị gia tăng = 10% tiền
+ * Mục đích: Tính và hiển thị số tiền và thuế giá trị gia tăng dựa trên số lượng và đơn giá.
+ * Đầu vào: Tên sản phẩm, số lượng (số nguyên), đơn giá (số thực).
+ * Đầu ra: In số tiền và thuế giá trị gia tăng.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise16() {
+    cout << "Chua duoc trien khai. Vui long trien khai tinh tien va thue gia tri gia tang.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise17
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình tính lương của nhân viên dựa theo thâm niên công tác 
+ *     (TNCT) như sau: Lương = hệ số * lương căn bản, trong đó lương căn bản là 
+ *     2.340.000 đồng.
+ *     • Nếu TNCT < 12 tháng: hệ số = 1.92
+ *     • Nếu 12 <= TNCT < 36 tháng: hệ số = 2.34
+ *     • Nếu 36 <= TNCT < 60 tháng: hệ số = 3.0
+ *     • Nếu TNCT >= 60 tháng: hệ số = 4.5
+ * Mục đích: Tính và hiển thị lương của nhân viên dựa trên thâm niên công tác.
+ * Đầu vào: Thâm niên công tác (số tháng, số nguyên).
+ * Đầu ra: In số tiền lương của nhân viên.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise17() {
+    cout << "Chua duoc trien khai. Vui long trien khai tinh luong nhan vien.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise18
+ * Mô tả: 
+ *   - Đề bài: Một điểm KARAOKE tính tiền khách hàng theo công thức sau:
+ *     • Mỗi giờ trong 3 giờ đầu tiên tính 30 000 đồng/giờ,
+ *     • Mỗi giờ tiếp theo có đơn giá giảm 30% so với đơn giá trong 3 giờ đầu tiên.
+ *     Ngoài ra nếu thời gian thuê phòng từ 8 – 17 giờ thì được giảm giá 10%.
+ *     Viết chương trình nhập vào giờ bắt đầu, giờ kết thúc và in ra số tiền khách hàng 
+ *     phải trả biết rằng 8 ≤ giờ bắt đầu < giờ kết thúc ≤ 24.
+ * Mục đích: Tính và hiển thị số tiền khách hàng phải trả cho dịch vụ karaoke.
+ * Đầu vào: Giờ bắt đầu và giờ kết thúc (số nguyên từ 8 đến 24).
+ * Đầu ra: In số tiền phải trả sau khi áp dụng các mức giá và giảm giá.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise18() {
+    cout << "Chua duoc trien khai. Vui long trien khai tinh tien karaoke.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise19
+ * Mô tả: 
+ *   - Đề bài: Nhập vào ngày, tháng của một năm hiện tại. Bạn hãy viết chương trình:
+ *     • Kiểm tra tính hợp lệ của ngày, tháng nhập;
+ *     • Cho biết tháng này thuộc quý mấy trong năm;
+ *     • Cho biết tháng nhập có bao nhiêu ngày;
+ *     • Cho biết ngày hôm sau của ngày đã nhập là ngày nào;
+ *     • Cho biết ngày hôm trước của ngày đã nhập là ngày nào.
+ * Mục đích: Kiểm tra và phân tích thông tin về ngày, tháng trong năm hiện tại.
+ * Đầu vào: Ngày, tháng, và năm hiện tại (số nguyên).
+ * Đầu ra: In kết quả kiểm tra hợp lệ, quý, số ngày trong tháng, ngày trước và ngày sau.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise19() {
+    cout << "Chua duoc trien khai. Vui long trien khai kiem tra ngay thang va tinh toan ngay.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise20
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình đổi tiền với các yêu cầu sau:
+ *     • Nhập vào số N là giá trị tiền cần đổi, in ra chi tiết số tờ tiền đổi cho khách 
+ *       hàng.
+ *     • Các loại tiền đổi là (đơn vị ngàn đồng): 500, 200, 100, 50, 20, 10, 5, 2, 1.
+ *     • Ưu tiên đổi từ tờ có giá trị cao nhất đến tờ có giá trị thấp nhất
+ * Mục đích: Đổi số tiền N thành các tờ tiền với số lượng tối ưu.
+ * Đầu vào: Số tiền N (số nguyên dương, đơn vị ngàn đồng).
+ * Đầu ra: In chi tiết số lượng các tờ tiền theo mệnh giá.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise20() {
+    cout << "Chua duoc trien khai. Vui long trien khai doi tien theo menh gia.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise21
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập vào số xe (gồm 4 chữ số) của bạn. Cho biết 
+ *     số xe của bạn được mấy nút?
+ * Mục đích: Tính và hiển thị số nút của số xe dựa trên tổng các chữ số.
+ * Đầu vào: Số xe gồm 4 chữ số (số nguyên từ 1000 đến 9999).
+ * Đầu ra: In số nút (tổng các chữ số chia lấy nguyên cho 10).
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise21() {
+    cout << "Chua duoc trien khai. Vui long trien khai tinh so nut cua so xe.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise22
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập một số Kwh tiêu thụ điện. Tính tiền điện phải 
+ *     trả biết rằng cách thức tính tiền theo qui định như sau: 100 kwh định mức đầu 
+ *     tiên có đơn giá trung bình là 600đ/kwh. Các kwh từ 101 đến 150 có đơn giá là 
+ *     700đ/kwh. Các kwh từ 151 đến 200 có đơn giá là 900đ/kwh. Các kwh từ 201 trở 
+ *     đi có đơn giá là 1100đ/kwh.
+ * Mục đích: Tính và hiển thị số tiền điện phải trả dựa trên số Kwh tiêu thụ.
+ * Đầu vào: Số Kwh tiêu thụ (số nguyên dương).
+ * Đầu ra: In số tiền điện phải trả.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise22() {
+    cout << "Chua duoc trien khai. Vui long trien khai tinh tien dien.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise23
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập một số từ 1 đến 7, in ra thứ tương ứng trong tuần.
+ * Mục đích: Hiển thị thứ trong tuần tương ứng với số từ 1 đến 7.
+ * Đầu vào: Số nguyên từ 1 đến 7.
+ * Đầu ra: In thứ tương ứng (Thứ Hai, Thứ Ba, ..., Chủ Nhật).
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise23() {
+    cout << "Chua duoc trien khai. Vui long trien khai in thu trong tuan.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise24
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập một tháng (1-12), in số ngày của tháng đó.
+ * Mục đích: Hiển thị số ngày của tháng nhập vào.
+ * Đầu vào: Tháng (số nguyên từ 1 đến 12).
+ * Đầu ra: In số ngày của tháng.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise24() {
+    cout << "Chua duoc trien khai. Vui long trien khai in so ngay cua thang.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise25
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình nhập một số nguyên và kiểm tra xem nó là số chẵn 
+ *     hay lẻ bằng (switch...case).
+ * Mục đích: Kiểm tra số nguyên là chẵn hay lẻ sử dụng switch-case.
+ * Đầu vào: Số nguyên.
+ * Đầu ra: In kết quả kiểm tra (chẵn hoặc lẻ).
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise25() {
+    cout << "Chua duoc trien khai. Vui long trien khai kiem tra chan le bang switch-case.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise26
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình tạo một máy tính đơn giản sử dụng switch...case 
+ *     (cộng, trừ, nhân, chia).
+ * Mục đích: Thực hiện các phép tính cơ bản (cộng, trừ, nhân, chia) sử dụng switch-case.
+ * Đầu vào: Hai số và một phép toán (cộng, trừ, nhân, chia).
+ * Đầu ra: In kết quả của phép toán.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise26() {
+    cout << "Chua duoc trien khai. Vui long trien khai may tinh don gian bang switch-case.\n";
+}
+
+/******************************************************************************
+ * Hàm: exercise27
+ * Mô tả: 
+ *   - Đề bài: Viết chương trình mô phỏng menu nhà hàng (chọn món ăn và in giá tiền).
+ * Mục đích: Mô phỏng menu nhà hàng, cho phép chọn món và tính giá tiền.
+ * Đầu vào: Lựa chọn món ăn từ menu.
+ * Đầu ra: In giá tiền của món được chọn.
+ * Ghi chú: Chưa được triển khai.
+ ******************************************************************************/
+void exercise27() {
+    cout << "Chua duoc trien khai. Vui long trien khai mo phong menu nha hang.\n";
+}
+
+// Hàm main điều khiển chương trình
+int main() {
+    int choice;
+    do {
+        displayMenu();
+        cin >> choice;
+        switch (choice) {
+            case 0:
+                cout << "Thoat chuong trinh.\n";
+                break;
+            case 1:
+                exercise1();
+                break;
+            case 2:
+                exercise2();
+                break;
+            case 3:
+                exercise3();
+                break;
+            case 4:
+                exercise4();
+                break;
+            case 5:
+                exercise5();
+                break;
+            case 6:
+                exercise6();
+                break;
+            case 7:
+                exercise7();
+                break;
+            case 8:
+                exercise8();
+                break;
+            case 9:
+                exercise9();
+                break;
+            case 10:
+                exercise10();
+                break;
+            case 11:
+                exercise11();
+                break;
+            case 12:
+                exercise12();
+                break;
+            case 13:
+                exercise13();
+                break;
+            case 14:
+                exercise14();
+                break;
+            case 15:
+                exercise15();
+                break;
+            case 16:
+                exercise16();
+                break;
+            case 17:
+                exercise17();
+                break;
+            case 18:
+                exercise18();
+                break;
+            case 19:
+                exercise19();
+                break;
+            case 20:
+                exercise20();
+                break;
+            case 21:
+                exercise21();
+                break;
+            case 22:
+                exercise22();
+                break;
+            case 23:
+                exercise23();
+                break;
+            case 24:
+                exercise24();
+                break;
+            case 25:
+                exercise25();
+                break;
+            case 26:
+                exercise26();
+                break;
+            case 27:
+                exercise27();
+                break;
+            default:
+                cout << "Lua chon khong hop le! Vui long nhap lai.\n";
+        }
+    } while (choice != 0);
+    return 0;
+}
