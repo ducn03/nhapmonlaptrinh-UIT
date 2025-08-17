@@ -813,6 +813,10 @@ void runMenuHam() {
             case 9: return;
             default: cout << "Lua chon khong ton tai. Vui long nhap lai" << "\n"; break;
         }
+        cout << "\nNhan Enter de tiep tuc... \n";
+        // Bo thua ky tu
+        cin.ignore();
+        cin.get();
     }
 }
 
@@ -918,5 +922,9 @@ void runMenuMang() {
             case 19: return;
             default: cout << "Lua chon khong ton tai. Vui long nhap lua chon khac" << "\n"; break;
         }
+        cout << "\nNhan Enter de tiep tuc... \n";
+        // Bo thua ky tu
+        cin.ignore();
+        cin.get();
     }
 }

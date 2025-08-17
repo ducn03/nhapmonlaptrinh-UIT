@@ -474,6 +474,10 @@ void runMenu() {
                 }
             default: cout<<"Lua chon khong hop le\n";
         }
+        cout << "\nNhan Enter de tiep tuc... \n";
+        // Bo thua ky tu
+        cin.ignore();
+        cin.get();
     }
 }
 
