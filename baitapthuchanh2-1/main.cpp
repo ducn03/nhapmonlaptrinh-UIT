@@ -129,6 +129,7 @@ string classifyTriangleByCoordinates(double x1, double y1, double x2, double y2,
 
 /**
  * Cấu trúc lưu trữ ngày tháng năm.
+ * @author Nguyễn Đình Đức - 25730017
  */
 struct Date {
     int d, m, y;
@@ -136,6 +137,7 @@ struct Date {
 
 /**
  * Kiểm tra một năm có phải năm nhuận hay không.
+ * @author Nguyễn Đình Đức - 25730017
  * @param y Năm cần kiểm tra.
  * @return true nếu là năm nhuận, false nếu không.
  */
@@ -143,6 +145,7 @@ bool isLeapYear(int y);
 
 /**
  * Trả về số ngày trong một tháng của một năm cụ thể.
+ * @author Nguyễn Đình Đức - 25730017
  * @param m Tháng.
  * @param y Năm.
  * @return Số ngày trong tháng đó.
@@ -151,6 +154,7 @@ int daysInMonth(int m, int y);
 
 /**
  * Kiểm tra ngày tháng năm có hợp lệ hay không.
+ * @author Nguyễn Đình Đức - 25730017
  * @param dt Cấu trúc Date.
  * @return true nếu hợp lệ, false nếu không.
  */
@@ -158,6 +162,7 @@ bool isValidDate(Date dt);
 
 /**
  * Xác định quý trong năm dựa trên tháng.
+ * @author Nguyễn Đình Đức - 25730017
  * @param m Tháng.
  * @return Quý (1 đến 4).
  */
@@ -165,6 +170,7 @@ int quarterOfYear(int m);
 
 /**
  * Tính ngày thứ bao nhiêu trong năm.
+ * @author Nguyễn Đình Đức - 25730017
  * @param dt Ngày cần tính.
  * @return Số thứ tự trong năm.
  */
@@ -172,6 +178,7 @@ int dayOfYear(Date dt);
 
 /**
  * Xác định thứ trong tuần cho một ngày.
+ * @author Nguyễn Đình Đức - 25730017
  * @param dt Ngày cần tính.
  * @return Chuỗi tên thứ trong tuần.
  */
@@ -181,6 +188,7 @@ string dayOfWeek(Date dt);
 
 /**
  * Đọc số nguyên có 2 chữ số thành chữ Tiếng Việt.
+ * @author Nguyễn Đình Đức - 25730017
  * @param n Số nguyên (10 <= n <= 99).
  * @return Chuỗi đọc số.
  */
