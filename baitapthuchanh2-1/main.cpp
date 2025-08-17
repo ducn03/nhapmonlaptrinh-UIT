@@ -816,7 +816,6 @@ void runMenuHam() {
         cout << "\nNhan Enter de tiep tuc... \n";
         // Bo thua ky tu
         cin.ignore();
-        cin.get();
     }
 }
 
@@ -925,6 +924,5 @@ void runMenuMang() {
         cout << "\nNhan Enter de tiep tuc... \n";
         // Bo thua ky tu
         cin.ignore();
-        cin.get();
     }
 }
