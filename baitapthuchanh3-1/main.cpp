@@ -477,7 +477,6 @@ void runMenu() {
         cout << "\nNhan Enter de tiep tuc... \n";
         // Bo thua ky tu
         cin.ignore();
-        cin.get();
     }
 }
 
